@@ -92,3 +92,16 @@ docker-data/
 application-local.yml
 application-local.yaml
 application-local.properties
+# ==============================
+# JVM diagnostics (heap/thread dumps, crash logs)
+# ==============================
+
+*.hprof
+hs_err_pid*
+replay_pid*
+
+# IntelliJ default output folder
+out/
+
+# Keep the Maven Wrapper jar
+!.mvn/wrapper/maven-wrapper.jar
