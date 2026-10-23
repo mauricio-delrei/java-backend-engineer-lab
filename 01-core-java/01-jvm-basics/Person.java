@@ -3,9 +3,17 @@
  */
 public class Person {
 
-    String name;
+    private String name;
 
-    Person(String name) {
+    public Person(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void rename(String name) {
         this.name = name;
     }
 }

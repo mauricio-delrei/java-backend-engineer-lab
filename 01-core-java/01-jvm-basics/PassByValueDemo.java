@@ -3,29 +3,23 @@
  */
 public class PassByValueDemo {
 
-    // The parameter receives a copy of the reference.
-    // Both references still point to the same object,
-    // so mutating the object is visible to the caller.
+    // Mutates the object through a copied reference.
     static void rename(Person p) {
-        p.name = "Alan Turing";
+        p.rename("Alan Turing");
     }
 
-    // Only the local copy of the reference is reassigned.
-    // The caller's reference remains unchanged.
+    // Reassigns only the local copy of the reference.
     static void replace(Person p) {
         p = new Person("Ada Lovelace");
     }
 
     public static void main(String[] args) {
-
         Person person = new Person("John von Neumann");
 
         rename(person);
-
-        System.out.println("After rename: " + person.name);
+        System.out.println("After rename: " + person.getName());
 
         replace(person);
-
-        System.out.println("After replace: " + person.name);
+        System.out.println("After replace: " + person.getName());
     }
 }

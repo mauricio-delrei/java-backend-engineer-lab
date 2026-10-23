@@ -8,19 +8,22 @@ public class LeakDemo {
 
     // The static collection can keep objects reachable for the lifetime
     // of the class loader.
-    static final List<Person> CACHE = new ArrayList<>();
+    private static final List<Person> CACHE = new ArrayList<>();
 
-    public static void main(String[] args) throws Exception {
-
+    public static void main(String[] args) {
         Person person = new Person("John von Neumann");
 
         CACHE.add(person);
 
-        // The local reference is gone, but CACHE still references the object.
+        System.out.println("Cache size after adding person: " + CACHE.size());
+
         person = null;
 
-        System.out.println("Person added to the static cache.");
+        System.out.println("Local reference set to null.");
+        System.out.println("Cache size after null assignment: " + CACHE.size());
 
-        Thread.sleep(60000);
+        CACHE.clear();
+
+        System.out.println("Cache size after clearing cache: " + CACHE.size());
     }
 }

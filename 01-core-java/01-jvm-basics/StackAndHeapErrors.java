@@ -1,5 +1,5 @@
 /**
- * Demonstrates StackOverflowError and OutOfMemoryError.
+ * Demonstrates StackOverflowError caused by infinite recursion.
  */
 public class StackAndHeapErrors {
 

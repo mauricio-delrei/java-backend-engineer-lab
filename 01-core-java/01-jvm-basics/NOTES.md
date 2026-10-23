@@ -72,7 +72,9 @@ Estas são as respostas que eu recomendo você praticar literalmente no início.
 
 1. What is the difference between the JVM, JRE and JDK?
 
-The JVM is responsible for executing Java bytecode. The JRE represents the runtime environment, including the JVM and the libraries required to run Java applications. The JDK is the development kit, which includes the runtime and development tools such as javac, javap and jcmd. As a developer, I normally work with the JDK.
+The JVM is responsible for executing Java bytecode.
+The JRE represents the runtime environment, including the JVM and the libraries required to run Java applications.
+The JDK is the development kit, which includes the runtime and development tools such as javac, javap and jcmd. As a developer, I normally work with the JDK.
 
 2. What happens when you compile a Java application?
 
