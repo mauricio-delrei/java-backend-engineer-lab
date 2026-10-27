@@ -3,7 +3,7 @@ import java.math.BigDecimal;
 
 public class EncapsulationDemo {
 
-    static class BankAccount {
+    public static class BankAccount {
         private BigDecimal balance;
 
         public BankAccount(BigDecimal initialBalance) {
